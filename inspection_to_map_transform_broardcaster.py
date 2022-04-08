@@ -22,9 +22,9 @@ def callback(crane_data):
         rospy.Time.now(),
         "inspection",
         "map")
-    print("data sent")
     
 if __name__ == '__main__':
     rospy.init_node('inspection_to_map_broardcaster')
-    crane_subscriber = rospy.Subscriber('/crane_pose', geometry_msgs.msg.PoseStamped, callback) 
+    crane_subscriber = rospy.Subscriber('/crane_pose', geometry_msgs.msg.PoseStamped, callback)
+    print("running")
     rospy.spin()
